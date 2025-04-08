@@ -1,0 +1,30 @@
+This code is for 'VisionGuard: Secure and Robust Visual Perception of Autonomous Vehicles in Practice'
+
+1. Since LGSVL stopped maintaining and updating at the beginning of last year, it is no longer possible to use Unity to modify the units of the map in LGSVL, e.g., inserting adversarial samples, we are unable to provide a data collection process.
+
+2. Nonetheless, we saved the real-time sensory data from LGSVL in previous experiments. We have evaluated 9 attacks in both simulation and physical scenarios. We take the SLAP attack as an example to demonstrate the practicality of our defense method. The code structure is shown below.
+
+ > - ARIMA_Trainset (Training set)
+ > - SLAP (saved benign data)
+ > - SLAP2 (saved adversarial data)
+ > - ARIMA.py (ARIMA model inference)
+ > - roc.py (draw roc)
+ > - Results
+ >   - setting-a.png
+ >   - setting-b.png
+ >   - setting-c.png
+ >   - setting-d.png
+
+    a) Python Vision == 3.6
+        - Run `pip install -r requirements.txt` to install packages.
+
+    b) Please run `ARIMA.py` to get the result shown in Figure 6(b), you can change different inference types in line 28.
+        - We give more description in the code.
+
+    c) Please run `roc.py` to get the result shown in Figure 9(a).
+
+3. Since we mainly evaluate our method on a real vehicle - Weston UGV, which is a specific hardware that cannot be accessed reasonably.
+However, we have released many video demos on our anonymous project website https://sites.google.com/view/visionguard, that contain diverse physical scenarios using UGV.
+
+
+
